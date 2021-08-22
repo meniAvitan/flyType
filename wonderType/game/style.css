@@ -1,0 +1,445 @@
+html,body{
+    
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0px;
+    font-family: 'Heebo', sans-serif;
+ } 
+ #mainTimer, #scoreCount{
+    position: absolute;
+    left: 95%;
+    margin: 0;
+    font-size: 2.5rem;
+    top: 5%;
+    font-weight: bold;
+    color: tomato;
+    z-index: 2;
+ }
+ #scoreCount{
+    left: 5%;
+ }
+
+ .grass, .sky, .road{
+     position: relative;
+ }
+ .sky{
+     height: 50%;
+     background: skyblue;
+ }
+ .grass{
+     height: 30%;
+     background: linear-gradient( skyblue, seagreen);
+     /* background: seagreen; */
+ }
+ .road{
+     height: 20%;
+     background: dimgray;
+     box-sizing: border-box;
+     border-top: 10px solid gray;
+     border-bottom: 10px solid gray;
+     width: 100%;
+ }
+ .lines{
+     box-sizing: border-box;
+     border: 5px dashed #fff;
+     height: 0x;
+     width: 100%;
+     position: absolute;
+     top: 45%;
+ }
+ .cloud{
+     position: absolute;
+     
+ }
+ .cloud:nth-child(1){
+     width: 200px;
+     height: 130px;
+     top: 100px;
+     opacity: 0.5;
+     animation: wind 80s linear infinite reverse;
+ 
+ }
+ .cloud:nth-child(2){
+     width: 300px;
+     height: 180px;
+     top: 20px;
+     animation: wind 50s linear infinite reverse;
+ 
+ }
+ /* #airplane2,  #airplane1{
+     position: absolute;
+     width: 10%;
+     height: 50%;
+     left: 0px;
+     animation-name: drive;
+     animation-duration: 8s;
+     animation-fill-mode: both;
+     animation-iteration-count: infinite;
+     animation-timing-function: ease-out;
+    animation-direction:normal;
+ } */
+
+ .airplane1{
+     position: absolute;
+     margin-top: 150px;
+     width: 300px;
+     z-index: 1;
+ }
+ #airplane2{
+    position: absolute;
+    margin-top: -60px;
+    width: 250px;
+    z-index: 1;
+}
+.startAirplane1{
+    display: inline;
+    animation-name: startAirplane1;
+    animation-duration: 3s;
+    animation-direction: normal;
+    animation-iteration-count: unset;
+
+}
+@keyframes startAirplane1 {
+    from {margin-left: -500px;}
+    to {margin-left: 0px;}   
+}
+.startAirplane2{
+    display: inline;
+    animation-name: startAirplane2;
+    animation-duration: 3s;
+    animation-direction: normal;
+    animation-iteration-count: unset;
+
+}
+@keyframes startAirplane2 {
+    from {margin-left: -410px;}
+    to {margin-left: 0px;}  
+}
+
+.yelloAirplane{
+    animation-name: yelloAirplane;
+    animation-duration: 34s;
+    animation-delay: 2s;
+}
+
+@keyframes yelloAirplane {
+    0%{margin-left: 0px;}
+    7%{margin-left: 100px;}
+    14%{margin-left: 170px;}
+    21%{margin-left: 230px;}
+    28%{margin-left: 260px;}
+    35%{margin-left: 310px;}
+    42%{margin-left: 370px;}
+    49%{margin-left: 420px;}
+    56%{margin-left: 470px;}
+    63%{margin-left: 530px;}
+    70%{margin-left: 580px;}
+    77%{margin-left: 700px;}
+}
+ .tree_1{
+     position: absolute;
+     top: 10%;
+     height: 100%;
+     left: 0px;
+ }
+ .tree_2{
+     position: absolute;
+     top: 35%;
+     height: 100%;
+     left: 35%;
+ }
+ .tree_3{
+     position: absolute;
+     top: 35%;
+     height: 100%;
+     left: 45%;
+     opacity: 0.7;
+ }
+ .tree_4{
+     position: absolute;
+     top: 10%;
+     height: 100%;
+     left: 70%;
+ }
+ .tree_5{
+     position: absolute;
+     top: 35%;
+     height: 100%;
+     left: 90%;
+ }
+ 
+ 
+ @keyframes drive{
+     from{ transform: translateX(-200px);}
+     to{ transform: translateX(1300px);}
+ }
+ @keyframes wind{
+     from{left: -300px;}
+     to{left: 100%;}
+ } 
+ #word{
+    position: absolute;
+    left: 43%;
+    bottom: 37%;
+    font-size: 3.5rem;
+    color: white;
+    font-weight: bold;
+    z-index: 3;
+    letter-spacing: 3px;
+    
+ }
+ #typed{
+    position: absolute;
+    text-align: center;
+    bottom: 25%;
+    left: 43%;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: tomato;
+    letter-spacing: 3px;
+ }
+ #timer{
+    position: absolute;
+    left: 45%;
+    font-size: 4rem;
+    bottom: 120%;
+    color: tomato;
+    
+ }
+ #inputType{
+     padding: 20px;
+     bottom: 7%;
+     font-size: 1.5rem;
+     border-top-right-radius: 15px;
+     border-bottom-right-radius: 15px;
+     border: none;
+     font-weight: bold;
+ }
+
+ #button, #score_page{
+    position: absolute;
+    bottom: 5%;
+    left: 45%;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+     border: none;
+     color: tomato;
+     transition: 1s ease;
+ }
+ #button:hover{
+     background-color: tomato;
+     color: white;
+     transform: rotate(360deg);
+ }
+ #muteSpeech{
+    position: absolute;
+    bottom: 7%;
+    left: 32%;
+ }
+ #unMuteSpeech{
+    position: absolute;
+    bottom: 7%;
+    left: 22%;
+ }
+ #menu{
+    display: grid;
+    grid-template-columns: repeat(1fr, 6);
+    grid-template-rows: repeat(1fr, 6);
+
+}
+ .level{
+     position: absolute;
+     font-weight: bold;
+     font-size: 1rem;
+     cursor: pointer;
+     width: 100px;
+     height: 50px;
+     background-color: white;
+     color: tomato;
+     border-bottom-left-radius: 25px;
+     border-top-left-radius: 25px;
+     border: none;
+     transition: 1s ease;
+ }
+ .level:hover{
+     background-color: tomato;
+     color: white;
+     transform: translateX(10px);
+     padding: 0;
+ }
+
+   /* volume */
+.back{
+    position: absolute;
+    bottom: 57%;
+    left: 93%;
+ }
+ .back a{
+     color: tomato;
+     font-weight: bold;
+ }
+   input[type="range"] {
+   
+    width: 150px;
+    
+  }
+  label{
+    position: absolute;
+    left: 60%;
+    bottom: 110%;
+    color: tomato;
+  }
+  .option {
+    position: absolute;
+    
+    bottom: 45%;
+  }
+ 
+ #easyLevel{
+    bottom: 35%;
+ }
+ #mediumLevel{
+    bottom: 25%;
+ }
+ #hardLevel{
+    bottom: 15%;
+ }
+ .restart{
+    position: absolute;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    background-color: #5995fd;
+    color: #fff;
+    border: 2px solid #fff;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    transition: 1s ease;
+    bottom: 5%;
+ }
+ /* ----------------test------------------------ */
+
+ #display {
+    
+    position: absolute;
+    right: 5%;
+    bottom: 30%;
+    width: 200px;
+    color: #b58900;
+  }
+#toType, #typed {
+    white-space: pre;
+  }
+  
+  #toType {
+    color: #586e75;
+  }
+  
+ 
+  .cursor {
+    color: #268bd2;
+  }
+  
+  .correct {
+    color: #859900;
+  }
+  
+  .incorrect {
+    color: #dc322f;
+  }
+  
+  #info th {
+    text-align: left;
+  }
+  
+  #info td {
+    text-align: right;
+  }
+
+  /* SCORE POP-UP */
+
+  .game-score{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+  }
+  .score-content{
+    position: relative;
+    width: 60%;
+    height: 60%;
+    text-align: center;
+    background:  linear-gradient(#4481eb, white);
+    padding: 25px;
+    border-radius: 10px;
+    color: black;
+  }
+  #game-score-title{
+    font-size: 4.5rem;
+    color: red;
+    margin-bottom: 0;
+  }
+  
+  #score_game , #restart_game{
+    width: 25%;
+    height: 15%;
+    border: 2px solid #fff;
+    background-color: #5995fd;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  
+ @media (max-width: 900px){
+  #menu, #button{
+    display: none;
+  }
+  .back{
+    display: none;
+  }
+    .mobile{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 5;
+      }
+      .mobile-content{
+        position: relative;
+        width: 60%;
+        height: 60%;
+        text-align: center;
+        background:  linear-gradient(#4481eb, white);
+        padding: 25px;
+        border-radius: 10px;
+        color: rgb(184, 64, 43);
+      }
+      #message span{
+          color: white;
+      }
+      .mobile_back a{
+        color: tomato;
+      }
+ }
+
+
+  
+ 
+  

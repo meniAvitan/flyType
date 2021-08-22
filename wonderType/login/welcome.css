@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+.welcome_img {
+  width: 30%;
+  height: 30%;
+}
+.back{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.back a{
+  color: tomato;
+}
+.title {
+  font-size: 2.2rem;
+  color: tomato;
+  margin: 20px;
+}
+.circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#4481eb, #fff);
+  clip-path: circle(600px at left 800px);
+  z-index: -1;
+}
+
+.option_btn a {
+  width: 15%;
+  height: 50px;
+  background-color: #5995fd;
+  text-decoration: none;
+  color: white;
+  border: 2px solid tomato;
+  font-size: 1.3rem;
+  padding-top: 0.5%;
+}
+a.to_form {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+a.to_game {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+form {
+  display: inline-block;
+  direction: rtl;
+  width: 400px;
+  border: 1px solid gray;
+  padding-bottom: 30px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .back{
+    width: 30px;
+    top: 2%;
+    right: 5%;
+  }
+  .welcome_img {
+    width: 60%;
+    height: 60%;
+  }
+  .option_btn a {
+    width: 30%;
+    height: 50px;
+    background-color: #5995fd;
+    text-decoration: none;
+    color: white;
+    border: 2px solid tomato;
+    font-size: 1.5rem;
+  }
+  .circle {
+    position: absolute;
+    top: 30%;
+    right: 0;
+  }
+}
+@media (max-width: 570px) {
+  .welcome_img {
+    width: 80%;
+    height: 80%;
+  }
+  .option_btn a {
+    width: 40%;
+    height: 40px;
+    background-color: #5995fd;
+    text-decoration: none;
+    color: white;
+    border: 2px solid tomato;
+    font-size: 1rem;
+  }
+}
